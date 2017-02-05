@@ -1,0 +1,10 @@
+function X = draw_ball(n,N,K)
+disp(['There are ',num2str(N),'balls in total.']);
+disp([num2str(K),' red balls and ',num2str(N-K),' green balls.'])
+disp(['Now let us draw ',num2str(n),' balls.']);
+r = [ones(K,1);zeros(N-K,1)];
+x = rand(N,1);
+[a,b] = sort (x);
+X = sum(r(b(1:n)));
+disp(['We get ',num2str(X),' red balls this time.'])
+
